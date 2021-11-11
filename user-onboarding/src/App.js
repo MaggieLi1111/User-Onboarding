@@ -46,7 +46,7 @@ function App() {
       axios.post("https://reqres.in/api/users", newData)
       .then(res => {
         console.log(res);
-        setUsers([ res.data], ...users);
+        setUsers( [ res.data , ...users] );
       })
       .catch( err => {
         console.error(err);
